@@ -1,13 +1,11 @@
 [project]
 name = "filter-arc-archived-tabs"
 version = "0.1.0"
-description = "Add your description here"
+description = "Clean Arc Tabs Archive"
 authors = [
     { name = "Patrick van der Smagt", email = "" }
 ]
-dependencies = [
-    "py>=1.11.0",
-]
+dependencies = []
 readme = "README.md"
 requires-python = ">= 3.8"
 
