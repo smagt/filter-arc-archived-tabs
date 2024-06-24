@@ -8,7 +8,11 @@ Usage of this script is at your own risk. The authors are not responsible for an
 
 ## Overview
 
-The Clean Arc project is designed to clean up and filter JSON data from a specific input file, focusing on data related to the Arc browser. It uses a shell script (`clean-arc.sh`) to validate and process JSON data, filtering it based on time parameters (days, minutes, and seconds) provided by the user. The project aims to streamline the management of Storable Archive Items from the Arc browser, making it easier to handle and analyze data over specific time periods.
+The Clean Arc project is designed to clean up and filter JSON data from the Arc Browser Archived Tabs file, thus allowing you to automatically delete old entries from the Arc Archived tabs.
+
+It uses a shell script (`clean-arc.sh`) to validate and process the archived tabs, filtering them based on time parameters (how many days, minutes, and seconds an entry is old) provided by the user. 
+
+_Note that running the script does not reflect in what happens in the browser; for that, unfortunately, Arc must be restarted._
 
 ## Features
 
@@ -32,9 +36,9 @@ The Clean Arc project is designed to clean up and filter JSON data from a specif
     cd clean-arc
     ```
 
-2. **Optional**: run `rye init` and `rye sync` to get the Python version and dependencies.
+2. **Optional**: run `rye init` and `rye sync` to get the correct Python version and dependencies.  It's optional, since most systems have a running Python version, and the script was written to only require standard libraries.
 
-3. **Install jq**: If you haven't installed `jq`, you can do so by following the instructions on the [jq GitHub page](https://github.com/stedolan/jq).  Typically, `brew install jq` will do the job if you have brew.
+3. **Install jq**: If you haven't installed `jq`, you can do so by following the instructions on the [jq GitHub page](https://github.com/stedolan/jq).  Typically, `brew install jq` will do the job if you have `brew`.
 
 Note that `jq` is not strictly necessary; it is used to check in- and output and thus highly recommended.
 
