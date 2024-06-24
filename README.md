@@ -1,5 +1,7 @@
 # Clean Arc Tabs Archive
 
+Written by Patrick van der Smagt
+
 **Warning.**
 This code as only been tested on MacOS Sonoma 14.5 and Arc browser 1.48.2 (51225).
 
@@ -26,6 +28,17 @@ _Note that running the script does not reflect in what happens in the browser; f
 
 - **jq**: A lightweight and flexible command-line JSON processor. [jq documentation](https://stedolan.github.io/jq/)
 - **Python**: Ensure Python is installed for running the `filter.py` script. [Python installation guide](https://www.python.org/downloads/)
+
+## Version Compatibility
+
+This project has been tested and is known to work with the following versions:
+
+- **Operating System**: MacOS Sonoma 14.5
+- **Arc Browser**: Version 1.48.2 (51225)
+- **jq**: Version 1.7.1
+- **Python**: Version 3.12.2
+
+Please note that while the project may work with versions not listed here, these are the environments in which it has been tested and confirmed to function as expected. Future versions of the software and dependencies may introduce breaking changes that could affect the functionality of this project.
 
 ### Installation
 
@@ -60,3 +73,10 @@ To run the `clean-arc.sh` script, navigate to the project directory and execute 
 ./clean-arc.sh [-v] <days> <minutes> <seconds>
 ```
 
+## Current Version
+
+Version 0.1.0
+
+## Changelog
+
+For the changes in each version, please refer to the [CHANGELOG.md](CHANGELOG.md) file.
