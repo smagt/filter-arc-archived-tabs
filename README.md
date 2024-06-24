@@ -1,4 +1,4 @@
-# Clean Arc Project
+# Clean Arc Tabs Archive
 
 **Warning.**
 This code as only been tested on MacOS Sonoma 14.5 and Arc browser 1.48.2 (51225).
