@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- This is a launchd job definition for the clean-arc script -->
+    <!-- copy it to ~/Library/LaunchAgents, edit its contents, and run
+    launchctl load ~/Library/LaunchAgents/com.user.filter-arc-archived-tabs.plist -->
+    <key>Label</key>
+    <string>com.user.filter-arc-archived-tabs</string>
+    <key>ProgramArguments</key>
+    <array>
+        <!-- Path to the script and arguments indicating 30 days with 0 hours and 0 minute.   Please adapt before installing -->
+        <string>/path/to/clean-arc.sh 30 0 0</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <!-- Schedule to run at 2:00 AM -->
+        <key>Hour</key>
+        <integer>2</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.user.filter-arc-archived-tabs.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.user.filter-arc-archived-tabs.out</string>
+</dict>
+</plist>

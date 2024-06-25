@@ -10,11 +10,11 @@ Usage of this script is at your own risk. The authors are not responsible for an
 
 ## Overview
 
-The Clean Arc project is designed to clean up and filter JSON data from the Arc Browser Archived Tabs file, thus allowing you to automatically delete old entries from the Arc Archived tabs.
+Clean Arc Tabs Archive is designed to remove old entries from the Arc Browser Archived Tabs file.  This is done by removing parts of the JSON data from the Arc browser Archived tabs file, located at `~/Library/Application Support/Arc/StorableArchiveItems.json` on MacOS.
 
 It uses a shell script (`clean-arc.sh`) to validate and process the archived tabs, filtering them based on time parameters (how many days, minutes, and seconds an entry is old) provided by the user. 
 
-_Note that running the script does not reflect in what happens in the browser; for that, unfortunately, Arc must be restarted._
+_Note that running the script does not update the browser cache; after running this script, unfortunately, Arc should be restarted._
 
 ## Features
 
@@ -40,13 +40,15 @@ This project has been tested and is known to work with the following versions:
 
 Please note that while the project may work with versions not listed here, these are the environments in which it has been tested and confirmed to function as expected. Future versions of the software and dependencies may introduce breaking changes that could affect the functionality of this project.
 
+There are two known peculiarities on Mac that makes this script particular: (1) the location of the JSON file at `~/Library/Application Support/Arc/StorableArchiveItems.json` (file `clean-arc.sh`) (2) the calculation of time stamps, which on Mac are calculated from Jan 1, 2001 (file `filter.py`).
+
 ### Installation
 
 1. **Clone the Repository**: Clone this repository to your local machine using Git.
 
     ```bash
     git clone git@github.com:smagt/filter-arc-archived-tabs
-    cd clean-arc
+    cd filter-arc-archived-tabs
     ```
 
 2. **Optional**: run `rye init` and `rye sync` to get the correct Python version and dependencies.  It's optional, since most systems have a running Python version, and the script was written to only require standard libraries.
@@ -62,7 +64,7 @@ Note that `jq` is not strictly necessary; it is used to check in- and output and
     - Load the plist with the following command:
 
         ```bash
-        launchctl load ~/Library/LaunchAgents/com.user.clean-arc.plist
+        launchctl load ~/Library/LaunchAgents/com.user.filter-arc-archived-tabs.plist
         ```
 
 ### Running the Script
