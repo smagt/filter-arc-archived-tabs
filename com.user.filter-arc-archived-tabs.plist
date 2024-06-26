@@ -9,14 +9,18 @@
     <string>com.user.filter-arc-archived-tabs</string>
     <key>ProgramArguments</key>
     <array>
-        <!-- Path to the script and arguments indicating 30 days with 0 hours and 0 minute.   Please adapt before installing -->
-        <string>/path/to/clean-arc.sh 30 0 0</string>
+        <!-- Path to the script and arguments indicating 15 days with 0 hours and 0 minute.   Please adapt before installing -->
+        <string>/some/dir/filter-arc-archived-tabs/clean-arc.sh</string>
+        <string>15</string>
+        <string>0</string>
+        <string>0</string>
     </array>
+
     <key>StartCalendarInterval</key>
     <dict>
-        <!-- Schedule to run at 2:00 AM -->
+        <!-- Schedule to run at 10:00 AM -->
         <key>Hour</key>
-        <integer>2</integer>
+        <integer>10</integer>
         <key>Minute</key>
         <integer>0</integer>
     </dict>
