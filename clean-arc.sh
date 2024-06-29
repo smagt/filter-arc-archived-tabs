@@ -7,6 +7,21 @@
 # The filtered data is saved to an output file. The script supports verbose mode, which provides additional output details
 # when the -v flag is used.
 
+
+# the next logic is to add time stamps to outout and error messages
+# Capture start time
+start_time=$(date "+%Y-%m-%d %H:%M:%S")
+
+# Create temporary files for stdout and stderr
+temp_stdout=$(mktemp)
+temp_stderr=$(mktemp)
+
+# Redirect stdout and stderr to the temporary files
+exec 3>&1 4>&2 1>"$temp_stdout" 2>"$temp_stderr"
+
+
+
+# script starts
 verbose=0 # Flag to track verbosity
 
 PYTHON=/usr/bin/python3
@@ -106,3 +121,23 @@ fi
 
 mv "$OUTPUT_FILE" "$INPUT_FILE" # Now safely overwrite the original input file with the modified output
 print_verbose "Original file has been updated."
+
+
+# now output the messaging
+# Restore stdout and stderr
+exec 1>&3 3>&- 2>&4 4>&-
+
+# Check and print stdout if not empty
+if [ -s "$temp_stdout" ]; then
+    echo "Output Timestamp: $start_time"
+    cat "$temp_stdout"
+fi
+
+# Check and print stderr if not empty
+if [ -s "$temp_stderr" ]; then
+    echo "Error Timestamp: $start_time" >&2
+    cat "$temp_stderr" >&2
+fi
+
+# Cleanup
+rm "$temp_stdout" "$temp_stderr"
