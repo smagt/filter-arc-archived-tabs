@@ -3,7 +3,7 @@
 Written by Patrick van der Smagt
 
 **Warning.**
-This code as only been tested on MacOS Sonoma 14.5 and Arc browser 1.48.2 (51225).
+This code as only been tested on MacOS Sonoma 14.5 and Arc browser 1.48.2 (51225) up to 1.49.0 (51346).
 
 **Disclaimer:**
 Usage of this script is at your own risk. The authors are not responsible for any damage or data loss resulting from the use of this script. Ensure you have backups and understand the implications before running the script.  It does overwrite Arc system files.
