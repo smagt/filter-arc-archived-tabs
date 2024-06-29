@@ -2,10 +2,8 @@
 
 Written by Patrick van der Smagt
 
-**Warning.**
-This code as only been tested on MacOS Sonoma 14.5 and Arc browser 1.48.2 (51225) up to 1.49.0 (51346).
-
-**Disclaimer:**
+**Warning and disclaimer.**
+This code as only been tested on MacOS for the Arc browser at specific versions, specified below.
 Usage of this script is at your own risk. The authors are not responsible for any damage or data loss resulting from the use of this script. Ensure you have backups and understand the implications before running the script.  It does overwrite Arc system files.
 
 ## Overview
@@ -31,12 +29,12 @@ _Note that running the script does not update the browser cache; after running t
 
 ## Version Compatibility
 
-This project has been tested and is known to work with the following versions:
+This project has been tested and has been shown to work with the following versions:
 
 - **Operating System**: MacOS Sonoma 14.5
-- **Arc Browser**: Version 1.48.2 (51225)
+- **Arc Browser**: Version 1.48.2 (51225) to 1.49.0 (51346)
 - **jq**: Version 1.7.1
-- **Python**: Version 3.12.2
+- **Python**: Version 3.9.6, 3.12.2
 
 Please note that while the project may work with versions not listed here, these are the environments in which it has been tested and confirmed to function as expected. Future versions of the software and dependencies may introduce breaking changes that could affect the functionality of this project.
 
