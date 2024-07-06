@@ -32,7 +32,7 @@ _Note that running the script does not update the browser cache; after running t
 This project has been tested and has been shown to work with the following versions:
 
 - **Operating System**: MacOS Sonoma 14.5
-- **Arc Browser**: Version 1.48.2 (51225) to 1.49.0 (51346)
+- **Arc Browser**: Version 1.48.2 (51225) to 1.49.1 (51346)
 - **jq**: Version 1.7.1
 - **Python**: Version 3.9.6, 3.12.2
 
