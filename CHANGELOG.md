@@ -4,18 +4,24 @@ All notable changes to the Clean Arc Tabs Archive project will be documented in 
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.1](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.2.1) - 2023-06-29
+## [0.2.2](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.2.2) - 2024-09-16
+
+### Fixed
+- Deletion of backup tabs archive files may have failed when the file names contain spaces or such.  Corrected.
+- Updated running versions in README.md.
+
+## [0.2.1](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.2.1) - 2024-06-29
 
 ### Added
-time stamps for error and output messages
- 
-## [0.2.0](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.2.0) - 2023-06-26
+- time stamps for error and output messages
+
+## [0.2.0](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.2.0) - 2024-06-26
 
 ### Fixed
 - now actually runs with plist. Added hardcoded positions of python and jq.  
-- check if jk is installed, and don't fail if not
+- check if jk is installed, and don't fail if not.
 
-## [0.1.0](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.1.0) - 2023-06-24
+## [0.1.0](https://github.com/smagt/filter-arc-archived-tabs/releases/tag/0.1.0) - 2024-06-24
 
 ### Added
 - Initial release of the Clean Arc Tabs Archive.

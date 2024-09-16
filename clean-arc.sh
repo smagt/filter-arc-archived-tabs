@@ -61,7 +61,6 @@ if ! command -v $JQ &> /dev/null; then
     jq_installed=0
 fi
 
-
 # Define the input and output file paths
 INPUT_FILE="$HOME/Library/Application Support/Arc/StorableArchiveItems.json"
 OUTPUT_FILE="FilteredStorableArchiveItems.json"
@@ -115,7 +114,10 @@ else
     backups=""
 fi
 if [ ! -z "$backups" ]; then
-    echo "$backups" | xargs rm
+    # the file names can contain spaces.  Solved by translating newlines to \0
+    # and asking xargs to recognise \0 as end of input, 
+    # rather than other characters.
+    echo "$backups" | tr '\n' '\0' | xargs -0 rm
     print_verbose "Removed oldest backups, maintaining at most 20 historic files."
 fi
 
