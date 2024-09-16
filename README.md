@@ -75,7 +75,7 @@ To run the `clean-arc.sh` script, navigate to the project directory and execute 
 
 ## Current Version
 
-Version 0.2.1
+Version 0.2.2
 
 ## Changelog
 
