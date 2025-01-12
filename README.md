@@ -31,8 +31,8 @@ _Note that running the script does not update the browser cache; after running t
 
 This project has been tested and has been shown to work with the following versions:
 
-- **Operating System**: MacOS 14.5 to 15.1.1
-- **Arc Browser**: Version 1.48.2 (51225) to 1.70.0 (56062)
+- **Operating System**: MacOS 14.5 to 15.2
+- **Arc Browser**: Version 1.48.2 (51225) to 1.77.0 (57419)
 - **jq**: Version 1.7.1
 - **Python**: Version 3.9.6, 3.12.2
 
