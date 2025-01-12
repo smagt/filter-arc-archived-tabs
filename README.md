@@ -57,7 +57,7 @@ Note that `jq` is not strictly necessary; it is used to check in- and output and
 
 4. **Set Up the plist**: The project includes a plist file for scheduling the script on macOS. To install it:
 
-    - Modify the plist file to include the correct path to the `clean-arc.sh` script and the correct days etc.
+    - Modify the plist file to include the correct path to the `clean-arc.sh` script and the correct days etc.  By default, this is set to cleaning all entries older than 15 daays.
     - Copy the plist file to `~/Library/LaunchAgents`.
     - Load the plist with the following command:
 
